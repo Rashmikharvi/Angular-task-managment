@@ -1,0 +1,8 @@
+<button mat-flat-button color="{{theme}}" (click)="onClickBtn()" [disabled]="loading || disabled" [type]="btnType"
+  >
+  <!-- in button i removed  [(ngClass)]="btnClass" code bcs of error -->
+   <span class="d-flex align-items-center">
+      {{loading ? loadingText : buttonText}}
+      <span *ngIf="loading" class="btn-ring ms-3"></span>
+   </span>
+</button>

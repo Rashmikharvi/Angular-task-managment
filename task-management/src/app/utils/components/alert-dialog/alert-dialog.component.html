@@ -1,0 +1,17 @@
+<h3 mat-dialog-title>{{ data.title }}</h3>
+<!-- to do   -check difference without using tab index -->
+<button mat-icon-button tabindex="-1" class="close" (click)="close()" aria-label="confirm dialog close button">
+    <mat-icon class="fs-5">cancel</mat-icon>
+</button>
+
+<div mat-dialog-content class="py-0">
+    <p class="mb-0">
+        {{ data.message }}
+    </p>
+</div>
+
+<div mat-dialog-actions align="end" class="p-3">
+    <button mat-flat-button class="px-4" color="primary" cdkFocusInitial (click)="confirm()">
+        {{ data.confirmText }}
+    </button>
+</div>
